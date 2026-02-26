@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/AppCore_Forum/">
+    <Project Path="Forum_AppCore/AppCore_Forum.csproj" />
+  </Folder>
+  <Folder Name="/Domain_Forum/">
+    <Project Path="Forum_Domain_Web_Api/Domain_Forum.csproj" />
+  </Folder>
+  <Folder Name="/InfraStructure_Forum_DB/">
+    <Project Path="InfraStructure_Forum_DB/InfraStructure_Forum_DB.csproj" />
+  </Folder>
+  <Folder Name="/Presentation_Forum_WEB_API/">
+    <Project Path="Presentation_Forum_WEB_API/Presentation_Forum_WEB_API.csproj" />
+  </Folder>
+</Solution>
