@@ -14,7 +14,7 @@ namespace InfraStructure_Forum_DB.Configurations
 
             builder.ToTable("Comments");
             builder.HasKey(c => c.Id);
-            builder.Property(c => c.Content).IsRequired().HasMaxLength(1000);
+            builder.Property(c => c.Content).IsRequired().IsUnicode().HasMaxLength(1000);
             builder.Property(c => c.CreatedAt)
                 .IsRequired();
 
