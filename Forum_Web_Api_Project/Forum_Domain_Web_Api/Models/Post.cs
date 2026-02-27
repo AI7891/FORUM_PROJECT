@@ -23,21 +23,26 @@
 
         }
 
-        public Post(int id, Member member, string subject, string body, IEnumerable<Comment> comments, IEnumerable<Like> likes, IEnumerable<Tag> tags)
+        public Post( Member member, string subject, string body, IEnumerable<Comment> comments, IEnumerable<Like> likes, IEnumerable<Tag> tags)
         {
             if (member is null)
             {
                 throw new ArgumentNullException("L'utilisateur n'existe pas");
             }
 
-            Id = id;
-            this.MemberId = member;
+            MemberId = member;
             Subject = subject;
             Body = body;
-            Comments = comments;
-            Likes = likes;
-            Tags = tags;
-        } 
+            Comments = comments ?? Enumerable.Empty<Comment>();
+            Likes = likes ?? Enumerable.Empty<Like>();
+            Tags = tags ?? Enumerable.Empty<Tag>();
+        }
+
+        public Post(int id, Member member, string subject, string body, IEnumerable<Comment> comments, IEnumerable<Like> likes, IEnumerable<Tag> tags)
+        : this( member, subject, body, comments, likes, tags)
+        {
+            Id = id;
+        }
         #endregion
     }
 }
